@@ -12,8 +12,8 @@ MIT License
 # Build Docker Image for review service
 docker build -t reviews .
 
-# Run review service on port 8080
-docker run -d --name reviews -p 8081:8081 reviews
+# Run review service on port 8082
+docker run -d --name reviews -p 8082:8082 reviews
 ```
 
 ## How to run with Docker Compose
