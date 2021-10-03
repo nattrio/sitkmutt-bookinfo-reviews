@@ -13,7 +13,8 @@ MIT License
 docker build -t reviews .
 
 # Run review service on port 8082
-docker run -d --name reviews -p 8082:8082 reviews
+docker run -d --name reviews -p :8082:8082 --link ratings:ratings \
+    -e ENABLE_RATINGS=true -e 'RATINGS_SERVICE=http://ratings:8080' reviews
 ```
 
 ## How to run with Docker Compose
